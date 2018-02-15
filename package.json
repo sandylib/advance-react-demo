@@ -5,7 +5,7 @@
   "author": "sandy zhang",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "dev:stop": "pm2 stop all",
     "dev:delete": "pm2 delete all",
     "webpack": "webpack -wd",
@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.6.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
